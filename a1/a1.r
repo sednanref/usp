@@ -1,6 +1,7 @@
-# 
-tab <- read.csv('USECAPProgrammingSelf-AssessmentSurvey-num.csv', header = TRUE)
+# Luis D. Fernandes Rotger 
+# Before execution remember to set the working direcoty correctly. 
 
+tab <- read.csv('USECAPProgrammingSelf-AssessmentSurvey-num.csv', header = TRUE)
 
 ############# 2.a
 experience <- sapply(tab[2], as.numeric)
@@ -18,7 +19,6 @@ os_projects <- os_projects[!is.na(os_projects)]
 print("Median of open Source projects' contribution: ")
 median(os_projects)
 
-
 ############# 2.c
 classConsideration <- tab[32]
 
@@ -32,7 +32,6 @@ considersBetter <- function(X) {
 considersBetter <- Vectorize(considersBetter)
 print("Number of people that consider themselves at least a bit better than the their fellow students: ")
 length(classConsideration[mapply(considersBetter, classConsideration)])
-
 
 ############# 3.a
 
